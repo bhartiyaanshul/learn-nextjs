@@ -1,5 +1,7 @@
-export const metadata = {
-    "title": 'About Next.js',
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'About',
 }
 
 export default function About() {

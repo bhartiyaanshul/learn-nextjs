@@ -1,7 +1,21 @@
 import { notFound } from "next/navigation"
+import { Metadata } from "next"
+
+type Props = {
+    params: {
+        productId: number
+    }
+}
+
+export const generateMetadata = ({ params }: Props): Metadata => {
+    return {
+        title: `Product ${params.productId} Details`
+    }
+
+}
 
 
-export default function ProductDetails({ params }: { params: { productId: number } }) {
+export default function ProductDetails({ params }: Props) {
 
     if (params.productId > 100) {
         return notFound()

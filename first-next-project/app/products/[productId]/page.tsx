@@ -1,5 +1,3 @@
- 
-
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
 
@@ -18,7 +16,6 @@ export const generateMetadata = ({ params }: Props): Metadata => {
         title: `Product ${params.productId} Details`
     }
 }
-
 
 export default function ProductDetails({ params }: Props) {
     const random = getRandomNumber(2)
